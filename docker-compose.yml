@@ -1,0 +1,28 @@
+# MySQL database shared with tomcat containers.
+db:
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: sessions
+    MYSQL_USER: javauser
+    MYSQL_PASSWORD: javapass
+  volumes:
+    - "./db:/docker-entrypoint-initdb.d"
+  ports:
+    - 3306:3306
+
+
+# First node of the first Tomcat virtual host.
+tomcat:
+  image: tomcat:latest
+  # Environment variables do not appear to be getting loaded the first time Tomcat starts!
+  environment:
+    JDBC_URL: jdbc:mysql://db:3306/sessions?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
+    JDBC_USER: javauser
+    JDBC_PASS: javapass
+  volumes:
+    - "./out/artifacts/WebServicesTest_war_exploded:/usr/local/tomcat/webapps/ROOT"
+  ports:
+    - 8080:8080
+  links:
+    - db
