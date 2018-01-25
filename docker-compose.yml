@@ -16,7 +16,7 @@ services:
       - 3306
 
 
-  # First node of the first Tomcat virtual host.
+  # Tomcat server.
   tomcat:
     image: tomcat:latest
     container_name: tomcat
