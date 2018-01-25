@@ -2,9 +2,8 @@ package db;
 
 import org.junit.Before;
 import org.junit.Test;
-import sun.security.pkcs11.Secmod;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 public class DBInfoTest {
 

@@ -32,7 +32,7 @@ public class DBInfo {
         database = props.getProperty("DATABASE");
         user = props.getProperty("USER");
         pass = props.getProperty("PASS");
-        jdbc = props.getProperty("JDBC");
+        jdbc = props.getProperty("JDBC_PREFIX")+ip + ":" + port + "/" + database + "?user=" + user + "&password=" + pass;
         driver = props.getProperty("DRIVERNAME");
 
         // All properties are not null and not empty
