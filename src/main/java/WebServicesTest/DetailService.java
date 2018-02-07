@@ -32,7 +32,7 @@ public class DetailService {
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "application/json" media type.
      * request format: /DetailService?cell_id=11111111
-     * @link Exceptions.WebServicesException if no cell_id was specified.
+     * @see Exceptions.WebServicesException if no cell_id was specified.
      *
      * @return an application/json response.
      */

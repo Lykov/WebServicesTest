@@ -37,7 +37,7 @@ public class ProfileService {
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "application/json" media type.
      * request format: /ProfileService?phone=11111111
-     * @link Exceptions.WebServicesException if no phone number was specified.
+     * @see Exceptions.WebServicesException if no phone number was specified.
      *
      * @return an application/json response.
      */

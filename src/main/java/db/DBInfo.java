@@ -10,13 +10,13 @@ import java.util.Properties;
  */
 public class DBInfo {
     static private DBInfo instance = null;
-    private String port = null;
-    private String database = null;
-    private String ip = null;
-    private String user = null;
-    private String pass = null;
-    private String jdbc = null;
-    private String driver = null;
+    private String port;
+    private String database;
+    private String ip;
+    private String user;
+    private String pass;
+    private String jdbc;
+    private String driver;
 
     private DBInfo() throws Exception {
         //Get file from resources folder
